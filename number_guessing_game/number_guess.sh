@@ -43,7 +43,7 @@ printf '%s\n' 'Guess the secret number between 1 and 1000:'
 while IFS= read -r GUESS; do
   ((NUMBER_OF_GUESSES += 1))
 
-  if [[ ! $GUESS =~ ^[+-]?[0-9]+$ ]]; then
+  if [[ ! $GUESS =~ ^[0-9]+$ ]]; then
     printf '%s\n' 'That is not an integer, guess again:'
     continue
   fi
